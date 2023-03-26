@@ -10,22 +10,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.menu),
-          title: Text("Trigoss"),
-          centerTitle: true,
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.access_alarms),
+      home: SafeArea(
+        child: Scaffold(
+          body: Center(
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                color: Colors.amber,
+              ),
+              child: Text("Hello World"),
             ),
-          ],
-        ),
-        body: Center(
-          child: Text(
-            "Hello World",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
       ),
